@@ -21,9 +21,9 @@ def process_form():
     return render_template('index.html', button_python=button_python,button_discord=button_discord,button_html=button_html,button_db=button_db)
 @app.route('/feedback', methods=['POST'])
 def save_feedback():
-    email = request.form.get["email"]
-    text = request.form.get["text"]
-    
+    email = request.form.get("email")
+    text = request.form.get("text")
+
     return render_template("feedback.html",email=email,text=text)
                            
 if __name__ == "__main__":
